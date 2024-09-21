@@ -23,7 +23,7 @@ p {
 }
 
 li {
-    list-style: none;
+    list-style-type: none;
 }
 
 .flex {
@@ -33,9 +33,6 @@ li {
    flex: 1;
 }
 
-img {
-   width: 300px;
-}
 
 .row {
    width: 100%;
@@ -90,6 +87,11 @@ img {
 
 /* ABOUT ME */
 
+.about-me__info {
+   display: flex;
+   flex-direction: column;
+}
+
 .about-me {
    min-height: 100vh;
    display: flex;
@@ -101,7 +103,7 @@ img {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   max-width: 500px;
+   max-width: 600px;
    margin: 0 auto;
    text-align: center;
 }
@@ -133,3 +135,21 @@ transform: scale(1.5);
    padding: 0 15px;
 }
 
+
+.about-me__link {
+   font-size: 25px;
+   color: #242424;
+   text-decoration: none;
+   padding: 0 16px; 
+}
+
+.about-me__img--container {
+   flex: 1;
+   display: flex;
+   align-items: center;
+}
+
+.about-me__img {
+   width: 100%;
+   margin: 0 auto;
+}

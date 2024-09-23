@@ -4,7 +4,7 @@
 
 * {
     font-family: "Playwrite CU", system-ui;
-    padding: 8px;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -54,6 +54,7 @@ section:nth-child(even) {
 
 .section__title {
    margin-bottom: 20px;
+   font-family: "Nunito", sans-serif ;
 }
  /* NAVIGATION BAR */
 
@@ -215,9 +216,17 @@ transform: scale(1.5);
 
 /* PROJECTS */
 
+.project {
+   margin-bottom: 145px;
+}
+
+.project:last-child {
+   margin-bottom: 40px;
+}
 .project__img {
    width: 100%;
-   transition: all 500ms ease-in-out;
+   transition: all 500ms ease;
+   
 }
 
 .project--wrapper {
@@ -226,7 +235,6 @@ transform: scale(1.5);
    border-radius: 20px;
    overflow: hidden;
    position: relative;
-
 }
 
 .project--wrapper:before {
@@ -251,3 +259,51 @@ transform: scale(1.5);
    filter: blur(5px);
 }
 
+.project__list {
+   padding-top: 20px;
+   margin: 0 48px;
+}
+
+.project:hover .project__description {
+   opacity: 1;
+   transform: translateY(-50%);
+}
+
+.project__description {
+   position: absolute;
+   top: 50%;
+   left: 90px;
+   transform: translateY(100%);
+   max-width: 550px;
+   z-index: 3;
+   opacity: 0;
+   transition: transform 450ms, opacity 300ms;
+}
+
+.project__description--title {
+   font-size: 40px;
+   font-family: "Nunito", sans-serif;
+}
+.project__description--sub-title {
+   margin: 16px 0;
+   font-family: "Nunito", sans-serif;
+}
+.project__description--para {
+   margin: 16px 0;
+   font-family: "Nunito", sans-serif;
+}
+.project__description--link {
+   font-size: 20px;
+   margin: 16px;
+   font-family: "Nunito", sans-serif;
+}
+
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link {
+   text-align: left;
+   color:#ffff;
+   text-decoration: none;
+}
